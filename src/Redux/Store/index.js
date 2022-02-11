@@ -1,9 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { combineReducers } from 'redux'
-import weatherReducer from "../Reducers/reducer"
-const reducer = combineReducers({
-    weatherReducer,
-})
+import reducer from '../Reducers/index'
+
 const store = configureStore({
   reducer,
 })
