@@ -1,6 +1,12 @@
 import { WEATHER_ACTIONS } from "../Reducers/weatherReducer";
 import * as TYPES from './constants';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+/*
+AsyncStorage: This would have been used to store data device to allow for offline view
+Location that we could save :
+       - User Location
+       - User forecast
+*/
 import { currentWeather, weatherForecast } from "../Network/fetch"
 
 
