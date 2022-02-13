@@ -361,6 +361,8 @@ PODS:
     - React-Core
   - RNSnackbar (2.4.0):
     - React-Core
+  - RNSVG (12.1.1):
+    - React
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -426,6 +428,7 @@ DEPENDENCIES:
   - ReactNativeNavigation (from `../node_modules/react-native-navigation`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-async-storage/async-storage`)"
   - RNSnackbar (from `../node_modules/react-native-snackbar`)
+  - RNSVG (from `../node_modules/react-native-svg`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -519,6 +522,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-async-storage/async-storage"
   RNSnackbar:
     :path: "../node_modules/react-native-snackbar"
+  RNSVG:
+    :path: "../node_modules/react-native-svg"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -573,6 +578,7 @@ SPEC CHECKSUMS:
   ReactNativeNavigation: 81628d0bac0c0d214d13f08bcd1721879ba70da7
   RNCAsyncStorage: b49b4e38a1548d03b74b30e558a1d18465b94be7
   RNSnackbar: be3333a21a453ccc272f41a8add5a71f7d44dfcd
+  RNSVG: 551acb6562324b1d52a4e0758f7ca0ec234e278f
   Yoga: 9b6696970c3289e8dea34b3eda93f23e61fb8121
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 

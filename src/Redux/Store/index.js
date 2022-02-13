@@ -1,7 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
-import reducer from '../Reducers/index'
+import forecast from '../Reducers/forecast';
+import weather from '../Reducers/weather';
 
 const store = configureStore({
-  reducer,
+  reducer: {
+    forecast: forecast,
+    weather: weather
+  },
 })
 export default store;
