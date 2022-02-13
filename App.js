@@ -15,8 +15,10 @@ import {
   Text,
   useColorScheme,
   View,
+  PermissionsAndroid
 } from 'react-native';
 import SplashScreen from "react-native-splash-screen";
+import LocationDeniedView from './src/Containers/Location/locationDenied';
 
 
 import {
@@ -33,9 +35,37 @@ import { goHome } from './src/Navigation';
 const App = () => {
   React.useEffect(() => {
     SplashScreen.hide();
-    goHome();
+    accessLocationPermissions();
     
   });
+  const accessLocationPermissions = async () => {
+
+    if (Platform.OS === 'android') {
+        try {
+            const granted = await PermissionsAndroid.request(
+                PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+                {
+                    title: 'Dvt Weather App',
+                    message: 'This application needs access to your location ' +
+                        'so you can get the weather',
+                    buttonNeutral: 'Ask Me Later',
+                    buttonNegative: 'Cancel',
+                    buttonPositive: 'OK',
+                },
+            );
+            if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+              goHome();
+            } else {
+                snackbar('Location Permission Denied')
+            }
+
+
+        } catch (err) {
+            console.warn(err);
+        }
+
+    }
+}
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
@@ -43,23 +73,9 @@ const App = () => {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-         <Text>
-hhghghghghhg
-         </Text>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+    <>
+    <LocationDeniedView />
+    </>
   );
 };
 

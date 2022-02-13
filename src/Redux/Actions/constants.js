@@ -1,0 +1,5 @@
+export const LOADING = 'LOADING';
+export const ERROR = 'ERROR';
+export const GET_WEATER_INFO = 'GET_WEATER_INFO';
+export const GET_WEATHER_FORECAST = 'GET_WEATHER_FORECAST';
+export const SAVE_AREA_LOCATIONS = 'SAVE_AREA_LOCATIONS';
