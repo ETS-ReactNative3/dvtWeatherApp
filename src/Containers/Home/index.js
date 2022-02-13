@@ -91,6 +91,7 @@ const Home = () => {
             }
         }
     }
+    console.log(weatherData)
     return (
         <>
             {checkPermision ? <LocationDeniedView /> :
