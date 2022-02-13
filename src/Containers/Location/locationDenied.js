@@ -19,7 +19,7 @@ const LocationDeniedView = () => {
     return (
         <View style={{alignItems:"center"}}>
             <Image source={require('../../Global/Utilities/Icons/noData.png')} style={{width:"100%",height:400}}/>
-            <Text style={{fontSize:20, }}>Location access was  Denied No weather data to show</Text>
+            <Text style={{fontSize:20, }}>No weather data to show </Text>
 
            <TouchableOpacity onPress={()=>openAppSettings()}>
                 <Text style={{fontSize:20,color:"#3dcfe1"}}>Open Settings</Text>
