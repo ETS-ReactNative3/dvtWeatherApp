@@ -33,11 +33,11 @@ export const  goHome = () => {
     Navigation.setRoot({
         root: {
             stack: {
-                id: "App",
+                id: "Home",
                 children: [
                     {
                         component: {
-                            name: "App"
+                            name: "Home"
                         }
                     }
                 ],
