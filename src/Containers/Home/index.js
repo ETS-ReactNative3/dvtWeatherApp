@@ -2,6 +2,8 @@ import React, { useEffect,useState } from 'react';
 import { PermissionsAndroid, Platform, View, Text } from 'react-native';
 import { disableTopBar,snackbar } from '../../Global/Utilities/functions';
 import Geolocation from 'react-native-geolocation-service';
+import CurrentWeather from './Views/currentConditions';
+import WeatherForecast from './Views/weatherFocast';
 
 
 
@@ -62,7 +64,13 @@ const Home = () => {
     }
     return (
         <View>
-            <Text>Home</Text>
+            <CurrentWeather />
+            <WeatherForecast />
+            <WeatherForecast />
+            <WeatherForecast />
+            <WeatherForecast />
+            <WeatherForecast />
+            <WeatherForecast />
         </View>
     );
 }
