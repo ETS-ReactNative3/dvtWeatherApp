@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -26,12 +26,15 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import { goHome } from './src/Navigation';
 
 
 
 const App = () => {
   React.useEffect(() => {
     SplashScreen.hide();
+    goHome();
+    
   });
   const isDarkMode = useColorScheme() === 'dark';
 
