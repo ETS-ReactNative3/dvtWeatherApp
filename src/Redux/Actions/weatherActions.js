@@ -8,7 +8,7 @@ export const getWeatherInfo = async (data, trigger) => {
             dispatch(WEATHER_ACTIONS.setWeatherInfo(data))
             try {
                 const dataToStore = JSON.stringify(data);
-                await AsyncStorage.setItem('RecentWeatherData', dataToStore);
+                await AsyncStorage.setItem('CurrentWeatherData', dataToStore);
 
             } catch (error) {
                 console.log(error);
