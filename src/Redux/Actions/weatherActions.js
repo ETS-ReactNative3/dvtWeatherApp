@@ -6,6 +6,8 @@ AsyncStorage: This would have been used to store data device to allow for offlin
 Location that we could save :
        - User Location
        - User forecast
+AsyncStorage.setItem('Locations', JSON.stringify(locations));
+
 */
 import { currentWeather, weatherForecast } from "../Network/fetch"
 
